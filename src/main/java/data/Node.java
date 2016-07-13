@@ -1,12 +1,12 @@
 package data;
 
-class Node {
+class Node <I, S> {
 
-    int value;
-    String param;
+    I value;
+    S param;
     Node next;
 
-    Node(int value, String param, Node next) {
+    Node(I value, S param, Node next) {
         this.value = value;
         this.param = param;
         this.next = next;

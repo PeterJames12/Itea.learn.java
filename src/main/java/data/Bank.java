@@ -4,44 +4,21 @@ package data;
 public class Bank {
 
     private static Node tail;
-    private static int result = 0;
 
     public static void main(String[] args) {
 
-        tail = new Node(12, "Create own Node", tail);
+        tail = new Node(23, "Better", tail);
         System.out.println("is empty: " + isEmpty());
 
         add(95, "Java");
-        add(21, "Linux");
-        add(23, "Arch");
+        add(23, "Linux");
+        add("Linux", "Arch");
         add(17, "KPI");
 
         System.out.println("length: " + length(tail));
         System.out.println(print(tail));
         removeAll();
         System.out.println("is empty: " + isEmpty());
-        System.out.println(maxElement(tail));
-        System.out.println(minElement(tail));
-    }
-
-    private static int minElement(Node top) {
-        if (top != null) {
-            if (top.value < result) {
-                result = top.value;
-            }
-            minElement(top.next);
-        }
-        return result;
-    }
-
-    private static int maxElement(Node top) {
-        if (top != null) {
-            if (top.value > result) {
-                result = top.value;
-            }
-            maxElement(top.next);
-        }
-        return result;
     }
 
     private static void removeAll() {
@@ -54,7 +31,7 @@ public class Bank {
         return (tail == null) ? 0 : 1 + length(tail.next);
     }
 
-    private static void add(int value, String java) {
+    private static <I, S> void add(I value, S java) {
 
         tail = new Node(value, java, tail);
     }
