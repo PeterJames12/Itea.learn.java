@@ -1,4 +1,4 @@
-package homework;
+package java8.homework;
 
 
 import java.util.*;
@@ -31,14 +31,7 @@ public class SinkCollect {
         System.out.println("Collection before mix:");
         System.out.println(collection);
 
-        Integer mas[] = new Integer[collection.size()];
-        final Iterator<Integer> iterator = collection.iterator();
-
-        int i = 0;
-        while (iterator.hasNext()) {
-            mas[i] = iterator.next();
-            i++;
-        }
+        Integer[] mas = collection.stream().toArray(Integer[]::new);
 
         Integer result = 0;
         for (int j = 1; j < mas.length; j++) {

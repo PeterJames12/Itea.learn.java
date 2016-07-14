@@ -1,15 +1,20 @@
-package homework;
+package java8.homework;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class GenerateCollections {
 
     public static void main(String[] args) {
 
-        File file = new File("/home/james/workspace/Itea/src/main/java/homework/someText.txt");
+        File file = new File("/home/james/workspace/Itea/src/main/java/java8.homework/someText.txt");
+
         Collection<String> collection = new ArrayList<>();
 
         selectText(collection,file);
