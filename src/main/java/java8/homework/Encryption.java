@@ -1,7 +1,6 @@
 package java8.homework;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Encryption {
@@ -9,14 +8,6 @@ public class Encryption {
     public static void main(String[] args) {
 
         giveMeSomeNumber(112, 123);
-
-        giveMeSomeString();
-    }
-
-    private static void giveMeSomeString() {
-
-        List<String> someString = new LinkedList<>();
-        someString.add("Hello i'm going to install linux linux linux");
     }
 
     private static void giveMeSomeNumber(Integer from, Integer to) {
