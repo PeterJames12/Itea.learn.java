@@ -1,21 +1,20 @@
-package data;
+package collections.workItea;
 
+/**
+ * author james
+ */
+public class Groy {
 
-public class Bank {
 
     private static Node tail;
 
     public static void main(String[] args) {
 
-        tail = new Node(23, "Better", tail);
+        tail = new Node<>(23, tail);
         System.out.println("is empty: " + isEmpty());
 
-        add(95, "Java");
-        add(23, "Linux");
-        add("Linux", "Arch");
-        add(17, "KPI");
-
-        System.out.println("length: " + length(tail));
+        add(95);
+        add(23);
         System.out.println(print(tail));
         removeAll();
         System.out.println("is empty: " + isEmpty());
@@ -31,14 +30,14 @@ public class Bank {
         return (tail == null) ? 0 : 1 + length(tail.next);
     }
 
-    private static <I, S> void add(I value, S java) {
+    private static <S> void add(S java) {
 
-        tail = new Node(value, java, tail);
+        tail = new Node<>(java, tail);
     }
 
     private static String print(Node top) {
 
-        return (top == null) ? "end" : top.value + " " + top.param + " | " + print(top.next);
+        return (top == null) ? "end" : top.param + " | " + print(top.next);
     }
 
     private static boolean isEmpty() {

@@ -35,7 +35,10 @@ public class SinkCollect {
         System.out.println("Collection after mix:");
         System.out.println(sumCollection);
 //        or
-        Integer[] mas = collection.stream().toArray(Integer[]::new);
+
+        Integer[] mas = new Integer[collection.size()];
+
+        collection.toArray(mas);
 //        or
         Integer arr[] = new Integer[collection.size()];
         int i = 0;

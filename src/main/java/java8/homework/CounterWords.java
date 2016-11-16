@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 /**
  * Created by james on 18.07.16.
+ * This class for ...
  */
 public class CounterWords {
 
