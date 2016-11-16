@@ -18,6 +18,7 @@ public class Service {
         map.put(3, "Alex");
         map.put(5, "Alex");
         map.put(6, "Alex");
+        map.put(6, "Alex");
 
         map.keySet().forEach(System.out::println);
         map.values().forEach(System.out::println);
